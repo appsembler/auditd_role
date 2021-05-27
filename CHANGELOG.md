@@ -8,10 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 ### Changed
+### Removed
+
+## [v1.1.0] - 2021-05-27
+
+### Changed
 
 * fixed fluentd config bug
-
-### Removed
 
 ## [v1.1.0] - 2021-05-27
 
@@ -22,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - initial version.
 
-[Unreleased]: https://github.com/appsembler/auditd_role/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/appsembler/auditd_role/compare/v1.1.1...HEAD
+[v1.1.1]: https://github.com/appsembler/auditd_role/releases/tag/v1.1.0..v1.1.1
 [v1.1.0]: https://github.com/appsembler/auditd_role/releases/tag/v1.0.0..v1.1.0
 [v1.0.0]: https://github.com/appsembler/auditd_role/releases/tag/v1.0.0
