@@ -1,0 +1,17 @@
+---
+
+- name: Install auditd
+  apt:
+    name: auditd
+    state: latest
+
+- name: Install plugins
+  apt:
+    name: audispd-plugins
+    state: latest
+
+- name: create rules.d directory
+  ansible.builtin.file:
+    path: "/etc/audit/rules.d"
+    state: directory
+    mode: "0750"

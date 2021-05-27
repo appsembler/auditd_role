@@ -1,0 +1,13 @@
+---
+
+- name: start auditd
+  service:
+    name: auditd
+    state: started
+  become: true
+
+- name: restart auditd
+  service:
+    name: auditd.service
+    state: restarted
+  become: true
