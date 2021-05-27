@@ -15,3 +15,25 @@
     path: "/etc/audit/rules.d"
     state: directory
     mode: "0750"
+
+# make sure that fluentd is capturing auditd's logs
+- name: ensure fluentd configurations dir exists
+  file:
+    path: "/etc/google-fluentd/config.d"
+    state: directory
+
+- name: ensure fluentd active configurations dir exists
+  file:
+    path: "/etc/google-fluentd/config-active.d"
+    state: directory
+
+- name: add our fluentd config
+  copy:
+    src: fluentd.conf
+    dest: /etc/google-fluentd/config.d/auditd.conf
+
+- name: symlink fluentd config to make it active
+  file:
+    path: "/etc/google-fluentd/config-active.d/auditd.conf"
+    src: "/etc/google-fluentd/config.d/auditd.conf"
+    state: link
