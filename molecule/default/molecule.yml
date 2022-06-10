@@ -6,6 +6,9 @@ driver:
 driver:
   name: docker
 platforms:
+  - name: ubuntu2204
+    image: geerlingguy/docker-ubuntu2204-ansible
+    pre_build_image: True
   - name: ubuntu2004
     image: geerlingguy/docker-ubuntu2004-ansible
     pre_build_image: True
